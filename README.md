@@ -20,3 +20,10 @@ Gathering new expert annotated data for any machine learning task is a costly an
 Text used in this research orginate from the **[tempeval2](http://timeml.org/tempeval2/)** where all sentences have been annotated with an event and event type by a panel of experts.
 
 This repository contains all the data and code that was used to annotate the text as all features and labels used during training and testing of the classifiers. We distinguish two different folders 'Code' and 'Data'. The folder 'Code' contains all python files used to compute the Sentence-Clarity, Sentence-Event- Clarity, TFIDF scores and to create the features and classifiers. All required jars have been provided. The 'Data' folder contains the input and output files from all crowdsourcing tasks aswell as the output files produced by the python files from 'Code'.
+
+
+The data and results produced by this research have been achieved by following the following steps:
+ 1. Gather annotations  crowdsourcing task 1 using the input file  **[https://raw.githubusercontent.com/CrowdTruth/Events-in-Text/master/Data/CrowdTask/sample_only_sentences_0.csv)**, employing batches with a maximum size of 30 sentences. 
+ 2. Run python code **[/Code/](https://raw.githubusercontent.com/CrowdTruth/Events-in-Text/master/Code/prepworders.py1)** to create combinedTrain folder
+ 3. Run python code  **[Code/Prepoccesing](https://raw.githubusercontent.com/CrowdTruth/Events-in-Text/master/Code/Preproccesing/featuresFinal%20(2).py)** to compute the features
+ 4. Run python code  **[Code/Bayes](featuresANDClassifier.py)** on the outputfiles of the previous stepts to train and test the classifier 
